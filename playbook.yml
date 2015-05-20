@@ -11,7 +11,7 @@
       git: repo=https://github.com/kevinjqiu/chezmoi.git
            dest="{{chezmoi_dir}}"
     - name: Install chezmoi (symbolic links)
-      command: "rake link"
+      command: "rake link_all"
       args:
           chdir: "{{chezmoi_dir}}"
     - name: Clone dot_bash
