@@ -21,3 +21,7 @@
       command: "{{dotbash_dir}}/install.sh"
       args:
           chdir: "{{dotbash_dir}}"
+    - name: Install vimmy
+      command: "{{chezmoi_dir}}/vim-bootstrap.sh {{chezmoi_dir}}/vimmy"
+      args:
+          chdir: "{{chezmoi_dir}}"
