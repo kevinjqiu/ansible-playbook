@@ -1,0 +1,2 @@
+[dev]
+buffonsneedle ansible_ssh_user=ubuntu
