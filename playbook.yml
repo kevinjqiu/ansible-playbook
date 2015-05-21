@@ -1,10 +1,4 @@
 ---
 - hosts: dev
-  tasks:
-    - name: Ensure git is installed
-      sudo: yes
-      apt: pkg=git-core state=latest update_cache=yes
-    - name: Ensure rake is installed
-      sudo: yes
-      apt: pkg=rake state=latest update_cache=yes
-    - include: tasks/chezmoi.yml
+  roles:
+    - dev
