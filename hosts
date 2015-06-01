@@ -1,2 +1,5 @@
-[dev]
+[ec2]
 buffonsneedle ansible_ssh_user=ubuntu
+
+[dev]
+vm ansible_ssh_user=kevin
