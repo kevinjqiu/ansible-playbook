@@ -1,0 +1,4 @@
+---
+    - name: Clone chezmoi
+      git: repo=https://github.com/kevinjqiu/chezmoi.git
+           dest="{{chezmoi_dir}}"
