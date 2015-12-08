@@ -1,4 +1,3 @@
 ---
-    - name: Clone chezmoi
-      git: repo=https://github.com/kevinjqiu/chezmoi.git
-           dest="{{chezmoi_dir}}"
+    - name: Get tmux configuration
+      get_url: url=https://raw.githubusercontent.com/kevinjqiu/chezmoi/master/tmux.conf dest=/home/{{ansible_user_id}}/.tmux.conf
