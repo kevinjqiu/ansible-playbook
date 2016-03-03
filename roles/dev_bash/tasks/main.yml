@@ -1,0 +1,3 @@
+---
+    - name: Get tmux configuration
+      get_url: url=https://raw.githubusercontent.com/kevinjqiu/chezmoi/master/tmux.conf dest=/home/{{ansible_user_id}}/.tmux.conf

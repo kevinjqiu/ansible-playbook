@@ -1,0 +1,3 @@
+chezmoi_dir: "/home/{{ansible_ssh_user}}/chezmoi"
+dotbash_dir: "{{chezmoi_dir}}/dot_bash"
+vimmy_dir: "{{chezmoi_dir}}/vimmy"
