@@ -1,6 +1,4 @@
 ---
-- hosts: dev
+- hosts: rpi
   roles:
       - dev
-      # - {role: guillaumededrie.couchdb, couchdb_install_method: "package", sudo: yes, couchdb_version: '1.5.0-0ubuntu1'}
-      # - {role: angstwad.docker_ubuntu, sudo: yes}

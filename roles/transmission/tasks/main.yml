@@ -1,0 +1,4 @@
+---
+    - name: Install transmission
+      sudo: yes
+      apt: pkg=transmission state=latest update_cache=yes
