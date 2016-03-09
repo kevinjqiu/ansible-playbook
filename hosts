@@ -10,3 +10,5 @@ prod-builds-[2:41].points.com ansible_ssh_user=kevin.qiu ansible_ssh_private_key
 # [points-ft]
 
 # [points-st]
+[points-per]
+tor-per-docker[1:4].points.com ansible_ssh_user=kevin.qiu ansible_ssh_private_key_file=~/.ssh/id_rsa_pts

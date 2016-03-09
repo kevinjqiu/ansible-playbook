@@ -2,19 +2,9 @@
     - name: Ensure git is installed
       sudo: yes
       apt: pkg=git-core state=latest update_cache=yes
-    - name: Ensure rake is installed
-      sudo: yes
-      apt: pkg=rake state=latest update_cache=yes
-    - name: Ensure build-essential is installed
-      sudo: yes
-      apt: pkg=build-essential state=latest update_cache=yes
     - name: Clone chezmoi
       git: repo=https://github.com/kevinjqiu/chezmoi.git
            dest="{{chezmoi_dir}}"
-    - name: Install chezmoi (symbolic links)
-      command: "rake link_all"
-      args:
-        chdir: "{{chezmoi_dir}}"
     - name: Clone dot_bash
       git: repo=https://github.com/kevinjqiu/dot_bash.git
            dest="{{dotbash_dir}}"
@@ -22,7 +12,3 @@
       command: "{{dotbash_dir}}/install.sh"
       args:
         chdir: "{{dotbash_dir}}"
-    - name: Install vimmy
-      command: "{{chezmoi_dir}}/vim-bootstrap.sh {{chezmoi_dir}}/vimmy"
-      args:
-        chdir: "{{chezmoi_dir}}"
