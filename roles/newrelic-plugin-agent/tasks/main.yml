@@ -1,0 +1,13 @@
+---
+  - name: Ensure pip is the latest version
+    sudo: yes
+    pip: name=pip state=latest
+  - name: Ensure newrelic plugin agent is installed
+    sudo: yes
+    pip: name=newrelic-plugin-agent
+  - name: Add config file
+    sudo: yes
+    backup: yes
+    template: dest=/etc/newrelic-plugin-agent.cfg
+              force=yes
+              src=newrelic-plugin-agent.cfg.tmpl

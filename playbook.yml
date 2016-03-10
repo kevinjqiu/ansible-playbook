@@ -1,4 +1,7 @@
 ---
-- hosts: points-per
+- hosts: points-per-docker
   roles:
       - dev
+- hosts: points-per-db
+  roles:
+      - newrelic-plugin-agent
