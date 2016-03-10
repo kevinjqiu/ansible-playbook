@@ -1,13 +1,20 @@
 ---
+  - name: Add newrelic user
+    user: name=newrelic group=adm
+    sudo: yes
   - name: Ensure pip is the latest version
     sudo: yes
     pip: name=pip state=latest
   - name: Ensure newrelic plugin agent is installed
     sudo: yes
     pip: name=newrelic-plugin-agent
+         virtualenv=/opt/newrelic-plugin-agent
+         virtualenv_python=python2.7
   - name: Add config file
     sudo: yes
     template: dest=/etc/newrelic-plugin-agent.cfg
               force=yes
               src=newrelic-plugin-agent.cfg.tmpl
               backup=yes
+    notify:
+      - restart newrelic-plugin-agent
