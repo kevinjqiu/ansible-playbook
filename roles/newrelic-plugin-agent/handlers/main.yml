@@ -1,4 +1,4 @@
 ---
   - name: restart newrelic-plugin-agent
     sudo: yes
-    command: /opt/newrelic-plugin-agent/bin/newrelic-plugin-agent -c /etc/newrelic-plugin-agent.cfg
+    command: "{{virtualenv}}/bin/newrelic-plugin-agent -c /etc/newrelic-plugin-agent.cfg"

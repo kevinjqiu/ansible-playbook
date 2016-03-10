@@ -8,8 +8,7 @@
   - name: Ensure newrelic plugin agent is installed
     sudo: yes
     pip: name=newrelic-plugin-agent
-         virtualenv=/opt/newrelic-plugin-agent
-         virtualenv_python=python2.7
+         virtualenv={{virtualenv}}
   - name: Add config file
     sudo: yes
     template: dest=/etc/newrelic-plugin-agent.cfg

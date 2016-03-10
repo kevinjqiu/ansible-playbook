@@ -7,7 +7,7 @@ Application:
   #proxy: http://localhost:8080
 
   couchdb:
-    name: localhost
+    name: {{ansible_hostname}}
     host: localhost
     #verify_ssl_cert: true
     port: {{couchdb_port}}
